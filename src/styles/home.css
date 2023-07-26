@@ -1,0 +1,41 @@
+body {
+    background-color:rgb(39, 41, 43) ;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 25px;
+}
+
+.characterInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .eachCard {
+    display: flex;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 18rem;
+    background-color: rgb(33,37,41);
+  }
+
+  h1 {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: gold;
+  }
+
+  h5 {
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    margin: 1px;
+  }
