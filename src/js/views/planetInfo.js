@@ -1,19 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CardCharacter } from "../component/cardForCharacter";
+import { CardPlanet } from "../component/cardForPlanet";
 import { Context } from "../store/appContext";
 
 
 
-const CharacterInfo = () => {
+const PlanetInfo = () => {
 
   const {store, actions} = useContext(Context)  
 
+
   return (
     <div className="characterInfo">
-      {store.characters.map((character, index) => (
-        <CardCharacter key={index} character={character} />
+      {store.planets.map((planet, index) => (
+        <CardPlanet key={index} planet={planet} />
       ))}
     </div>
   )};
 
-export default CharacterInfo;
+export default PlanetInfo;

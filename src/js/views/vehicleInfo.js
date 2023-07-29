@@ -1,19 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CardCharacter } from "../component/cardForCharacter";
+import { CardVehicle } from "../component/cardForVehicle";
 import { Context } from "../store/appContext";
 
 
 
-const CharacterInfo = () => {
+const VehicleInfo = () => {
 
   const {store, actions} = useContext(Context)  
 
+
   return (
     <div className="characterInfo">
-      {store.characters.map((character, index) => (
-        <CardCharacter key={index} character={character} />
+      {store.vehicles.map((vehicle, index) => (
+        <CardVehicle key={index} vehicle={vehicle} />
       ))}
     </div>
   )};
 
-export default CharacterInfo;
+export default VehicleInfo;
