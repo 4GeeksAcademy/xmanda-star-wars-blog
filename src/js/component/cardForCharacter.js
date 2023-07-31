@@ -11,11 +11,13 @@ export const CardCharacter = (props) => {
 				<img className="card-img-top" src={"https://starwars-visualguide.com/assets/img/characters/" + props.character.uid + ".jpg"} />
 				<div className="card-body">
 					<h5 className="card-title">{props.character.name}</h5>
+					<Link to={`/data/character/${props.character.uid}`}>
 					<button type="button" className="btn btn-outline-info me-2">
 						Learn more
 					</button>
+					</Link>
 					<button type="button" className="btn btn-warning">
-						Favorite
+					★
 					</button>
 				</div>
 				

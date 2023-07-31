@@ -15,7 +15,7 @@ export const CardVehicle = (props) => {
 						Learn more
 					</button>
 					<button type="button" className="btn btn-warning">
-						Favorite
+					★
 					</button>
 				</div>
 				
