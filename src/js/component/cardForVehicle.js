@@ -16,18 +16,15 @@ export const CardVehicle = (props) => {
 						Learn more
 					</button>
 					</Link>
-					<button type="button" className="btn btn-warning">
-					★
-					</button>
+					<button className="btn btn-warning" onClick={() => {
+                                            if (!store.favorites.includes(props.vehicle.namee)) {
+                                                actions.addFavorite(props.vehicle.name);
+                                            }
+                                        }}> {
+                                                store.favorites.includes(props.vehicle.name) ? '★' : '☆'
+                                            }</button>
 				</div>
 				
-				{/* <Link to={`/data/vehicles/${props.vehicle.uid}`}>
-							<button type="button" className="btn btn-outline-info me-2">
-								Learn more
-							</button>
-						</Link>
-						
-	*/}
 			</div>
 		</div>
 	);

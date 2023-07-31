@@ -24,18 +24,15 @@ export const CardPlanet = (props) => {
 						Learn more
 					</button>
 					</Link>
-					<button type="button" className="btn btn-warning">
-					★
-					</button>
+					<button className="btn btn-warning" onClick={() => {
+                                            if (!store.favorites.includes(props.planet.namee)) {
+                                                actions.addFavorite(props.planet.name);
+                                            }
+                                        }}> {
+                                                store.favorites.includes(props.planet.name) ? '★' : '☆'
+                                            }</button>
 				</div>
 				
-				{/* <Link to={`/data/vehicles/${props.vehicle.uid}`}>
-							<button type="button" className="btn btn-outline-info me-2">
-								Learn more
-							</button>
-						</Link>
-						
-	*/}
 			</div>
 		</div>
 	);

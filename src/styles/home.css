@@ -69,3 +69,8 @@ body {
     margin-left: 13rem;
     margin-top: 3rem;
   }
+  .delete{
+    display:flex;
+    justify-content: flex-end;
+    color: lightgray;
+    }

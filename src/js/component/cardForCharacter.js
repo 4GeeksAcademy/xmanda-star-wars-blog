@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { Context } from '../store/appContext';
 
 export const CardCharacter = (props) => {
+	
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="eachCard">
@@ -16,18 +17,17 @@ export const CardCharacter = (props) => {
 						Learn more
 					</button>
 					</Link>
-					<button type="button" className="btn btn-warning">
-					★
-					</button>
+				
+					<button className="btn btn-warning" onClick={() => {
+                                            if (!store.favorites.includes(props.character.namee)) {
+                                                actions.addFavorite(props.character.name);
+                                            }
+                                        }}> {
+                                                store.favorites.includes(props.character.name) ? '★' : '☆'
+                                            }</button>
 				</div>
 				
-				{/* <Link to={`/data/vehicles/${props.vehicle.uid}`}>
-							<button type="button" className="btn btn-outline-info me-2">
-								Learn more
-							</button>
-						</Link>
-						
-	*/}
+	
 			</div>
 		</div>
 	);

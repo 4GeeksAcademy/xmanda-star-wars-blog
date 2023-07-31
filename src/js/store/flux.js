@@ -21,6 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characterDetails: [],
 			vehicleDetails: [],
 			planetDetails: [],
+			favorites: [],
 
 		},
 		actions: {
@@ -75,6 +76,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(err => err)
 					
+			},
+			addFavorite: (select) => {
+				setStore({ favorites: [...getStore().favorites, select] });
+				console.log(getStore().favorites);
+			},
+
+			deleteFavorite: (selected) => {
+				setStore({
+					favorites: getStore().favorites.filter((value, index) => index !== selected)
+				});
 			},
 
 		}
