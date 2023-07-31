@@ -17,9 +17,9 @@ export const CharactersData = (props) => {
 		<>
 			<div className="jumbotron">
 				<main className="container">
-					<section className="row justify-content-center align-content center">
+					<div className="row justify-content-center align-content center">
 						<div className="col-lg-6 mt-4">
-							<img className="image"
+							<img className="image-character"
 								src={`https://starwars-visualguide.com/assets/img/characters/${params.id}.jpg`}
 
 							/>
@@ -32,7 +32,7 @@ export const CharactersData = (props) => {
 							</ul>
 							<ul class="list-group">
 								<li class="title-item list-group-item border-light">Height ｡･:*˚:✧｡</li>
-								<li class="list-group-item bg-transparent text-light border-light">{detail.height} m</li>
+								<li class="list-group-item bg-transparent text-light border-light">{detail.height} cm</li>
 							</ul>
 							<ul class="list-group">
 								<li class="title-item list-group-item border-light">Eye Color ｡･:*˚:✧｡</li>
@@ -43,11 +43,11 @@ export const CharactersData = (props) => {
 								<li class="list-group-item bg-transparent text-light border-light">{detail.skin_color}</li>
 							</ul>
 						</div>
-					</section>
-					<hr />
-					<section className="row text-center my-4 py-4">
+					</div>
+		
+					<div className="row text-center my-4 py-4">
 						<h5>─── ⋆⋅☆⋅⋆ ──</h5>
-					</section>
+					</div>
 				</main>
 			</div>
 		</>

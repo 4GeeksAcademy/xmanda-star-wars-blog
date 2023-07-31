@@ -11,9 +11,11 @@ export const CardVehicle = (props) => {
 				<img className="card-img-top" src={"https://starwars-visualguide.com/assets/img/vehicles/" + props.vehicle.uid + ".jpg"} />
 				<div className="card-body">
 					<h5 className="card-title">{props.vehicle.name}</h5>
+					<Link to={`/data/vehicle/${props.vehicle.uid}`}>
 					<button type="button" className="btn btn-outline-info me-2">
 						Learn more
 					</button>
+					</Link>
 					<button type="button" className="btn btn-warning">
 					★
 					</button>

@@ -19,9 +19,11 @@ export const CardPlanet = (props) => {
   } />
 				<div className="card-body">
 					<h5 className="card-title">{props.planet.name}</h5>
+					<Link to={`/data/planet/${props.planet.uid}`}>
 					<button type="button" className="btn btn-outline-info me-2">
 						Learn more
 					</button>
+					</Link>
 					<button type="button" className="btn btn-warning">
 					★
 					</button>
